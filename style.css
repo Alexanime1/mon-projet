@@ -1,0 +1,15 @@
+.contenu{border:3px solid #000;margin:50px auto;padding:40px;padding-top:0;background-color:#75fff1;width:70%;box-shadow:4px 4px 10px rgba(0,0,0,0.2)}
+h1{text-align:center;color:darkblue;padding:10px 20px;background-color:#00ff00;font-size:28px;margin:0 auto;display:block;width:fit-content}
+.container{display:flex;align-items:flex-start;justify-content:space-between;margin-top:20px}
+.texte{flex:2;font-style:italic;color:#2f00ff;font-size:28px;line-height:1.5;text-indent:50px}
+.image{flex:1;text-align:right}
+.image img{width:200px;border:2px solid #ccc}
+a{display:inline-block;margin-top:15px;color:darkred;font-weight:bold;text-decoration:none}
+a:hover{text-decoration:underline}
+form{margin-top:30px}
+label{display:block;font-weight:bold;margin-top:10px}
+input[type="text"]{width:250px;padding:5px;margin-top:5px}
+.questions{margin-top:20px;font-size:20px}
+.questions label{display:inline-block;margin-right:20px;font-weight:normal}
+button{margin-top:20px;background-color:lightgray;padding:8px 15px;border:none;cursor:pointer}
+button:hover{background-color:#ddd}

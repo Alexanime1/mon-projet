@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>Sortie cinéma</title>
+<title>Sortie SVT - UGC Lille</title>
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
@@ -10,27 +10,25 @@
 <body>
 <div class="contenu">
 <h1>Sortie cinéma</h1>
+<p id="compteur" style="text-align:center;font-size:18px;color:darkblue;font-weight:700">Chargement...</p>
 <div class="container">
 <div class="texte"><p>Dans le cadre du programme de SVT sur le développement durable, une séance de cinéma est programmée le <strong>jeudi 26 septembre</strong> au cinéma UGC de Lille de 9h à 12h.</p></div>
 <div class="image"><img src="https://fr.web.img5.acsta.net/c_310_420/img/52/fb/52fb8f0345af2b0940557aa049ca19fd.jpg" alt="Avatar 3"></div>
 </div>
-<div id="map-container" style="width:100%;border-radius:12px;overflow:hidden;margin:20px 0;box-shadow:0 4px 16px rgba(0,0,0,0.2);border:2px solid #e50914">
-<div id="map" style="height:350px;width:100%"></div>
+<div id="map-container" style="width:100%;border-radius:12px;overflow:hidden;margin:20px 0;box-shadow:0 4px 16px rgba(0,0,0,.2);border:2px solid #e50914">
+<div id="map" style="height:350px"></div>
 </div>
 <a href="https://www.allocine.fr/video/player_gen_cmedia=20627042&cfilm=187247.html">Lien vers le synopsis</a>
 <form onsubmit="envoyerEmail();return false">
-<label for="nom">Nom :</label>
-<input type="text" id="nom" placeholder="Votre nom">
-<label for="prenom">Prénom :</label>
-<input type="text" id="prenom" placeholder="Votre prénom">
-<label for="classe">Classe :</label>
-<input type="text" id="classe" placeholder="Votre classe">
+<label>Nom :<input type="text" id="nom" placeholder="Votre nom"></label>
+<label>Prénom :<input type="text" id="prenom" placeholder="Votre prénom"></label>
+<label>Classe :<input type="text" id="classe" placeholder="Votre classe"></label>
 <p><strong>Viendra à la séance :</strong></p>
 <label><input type="radio" name="presence" id="oui" value="oui" onchange="gererAffichagePaiement()"> Oui</label>
 <label><input type="radio" name="presence" id="non" value="non" onchange="gererAffichagePaiement()"> Non</label>
 <div class="questions" id="ligne-paiement" style="display:none">
 <p><strong>A versé la somme de 6,45 € à l'ordre de M. Leroux :</strong></p>
-<label><input type="checkbox" id="paiement"></label>
+<input type="checkbox" id="paiement">
 </div>
 <br>
 <input type="submit" value="Envoyer">
@@ -38,9 +36,9 @@
 </div>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
-const map=L.map('map',{center:[50.63394,3.06322],zoom:16});
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',maxZoom:19}).addTo(map);
-L.marker([50.63394,3.06322],{icon:L.divIcon({className:'',html:`<div style="background:#e50914;width:40px;height:40px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);border:3px solid white;box-shadow:0 3px 10px rgba(229,9,20,0.5);display:flex;align-items:center;justify-content:center"><span style="transform:rotate(45deg);font-size:18px">🎬</span></div>`,iconSize:[40,40],iconAnchor:[20,40],popupAnchor:[0,-44]})}).addTo(map).bindPopup(`<strong style="color:#e50914">🎬 UGC Ciné Cité Lille</strong><br>40 Rue de Béthune, 59800 Lille<br>Séance : 9h – 12h<br><br><a href="https://www.google.com/maps/dir/?api=1&destination=50.63394,3.06322" target="_blank" style="background:#e50914;color:white;padding:5px 10px;border-radius:5px;text-decoration:none;font-size:0.8rem">Itinéraire</a>`).openPopup();
+const m=L.map('map',{center:[50.63394,3.06322],zoom:16});
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',maxZoom:19}).addTo(m);
+L.marker([50.63394,3.06322],{icon:L.divIcon({className:'',html:`<div style="background:#e50914;width:40px;height:40px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);border:3px solid white;box-shadow:0 3px 10px rgba(229,9,20,.5);display:flex;align-items:center;justify-content:center"><span style="transform:rotate(45deg);font-size:18px">🎬</span></div>`,iconSize:[40,40],iconAnchor:[20,40],popupAnchor:[0,-44]})}).addTo(m).bindPopup(`<strong style="color:#e50914">🎬 UGC Ciné Cité Lille</strong><br>40 Rue de Béthune, 59800 Lille<br>Séance : 9h – 12h<br><br><a href="https://www.google.com/maps/dir/?api=1&destination=50.63394,3.06322" target="_blank" style="background:#e50914;color:white;padding:5px 10px;border-radius:5px;text-decoration:none;font-size:.8rem">Itinéraire</a>`).openPopup();
 </script>
 <script src="script.js"></script>
 </body>

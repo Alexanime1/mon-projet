@@ -14,14 +14,4 @@ input[type=text]{width:250px;padding:5px;margin-top:5px}
 button{margin-top:20px;background:#d3d3d3;padding:8px 15px;border:none;cursor:pointer}
 button:hover{background:#ddd}
 @keyframes popIn{from{transform:scale(.5);opacity:0}to{transform:scale(1);opacity:1}}
-@media(max-width:768px){
-.contenu{width:90%;padding:0 15px 20px;margin:20px auto}
-.container{flex-direction:column}
-.texte{font-size:18px;text-indent:20px}
-.image{text-align:center;margin-top:15px}
-.image img{width:150px}
-h1{font-size:22px;padding:8px 15px}
-#map{height:250px}
-input[type=text]{width:100%}
-#overlay div{padding:20px;margin:10px}
-}
+@media(max-width:768px){.contenu{width:90%;padding:0 15px 20px;margin:20px auto}.container{flex-direction:column}.texte{font-size:18px;text-indent:20px}.image{text-align:center;margin-top:15px}.image img{width:150px}h1{font-size:22px;padding:8px 15px}#map{height:250px}input[type=text]{width:100%}#overlay div{padding:20px;margin:10px}}

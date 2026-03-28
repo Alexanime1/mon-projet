@@ -8,17 +8,14 @@
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 <body>
-
-<!-- POPUP ANIMATION -->
 <div id="overlay" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.5);z-index:999;align-items:center;justify-content:center">
-<div id="popup" style="background:white;border-radius:16px;padding:40px;text-align:center;box-shadow:0 8px 32px rgba(0,0,0,.3);animation:popIn .3s ease">
+<div style="background:white;border-radius:16px;padding:40px;text-align:center;box-shadow:0 8px 32px rgba(0,0,0,.3);animation:popIn .3s ease">
 <div style="font-size:60px">✅</div>
 <h2 style="color:darkblue;margin:10px 0">Formulaire envoyé !</h2>
 <p style="color:#555">Merci, ta réponse a bien été enregistrée.</p>
 <button onclick="fermerPopup()" style="margin-top:20px;background:#0f0;color:darkblue;padding:10px 25px;border:none;border-radius:8px;font-weight:700;font-size:16px;cursor:pointer">OK</button>
 </div>
 </div>
-
 <div class="contenu">
 <h1>Sortie cinéma</h1>
 <p id="compteur" style="text-align:center;font-size:18px;color:darkblue;font-weight:700">Chargement...</p>
@@ -45,7 +42,6 @@
 <input type="submit" value="Envoyer">
 </form>
 </div>
-
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
 const m=L.map('map',{center:[50.63394,3.06322],zoom:16});
